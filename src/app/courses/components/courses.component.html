@@ -1,0 +1,22 @@
+<div class="courses">
+  <div class="d-flex">
+    <div class="filter-block input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter title"
+        aria-label="Enter title"
+        aria-describedby="basic-addon2"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button">Find</button>
+      </div>
+    </div>
+    <button class="ml-auto btn btn-primary mb-3" type="button">
+      Add course
+    </button>
+  </div>
+  <div *ngFor="let course of coursesList; let index = index">
+    <app-details-course [course]="course" [index]="index"></app-details-course>
+  </div>
+</div>

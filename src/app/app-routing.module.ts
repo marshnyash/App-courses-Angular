@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/components/login.component';
-import { CoursesComponent } from './courses/courses.component';
+import { CoursesComponent } from './courses/components/courses.component';
 import { AddEditCourseComponent } from './add-edit-course/add-edit-course.component';
 import { AuthGuard } from './login/guards/auth-guard.guard';
 
