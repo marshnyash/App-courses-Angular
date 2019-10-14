@@ -1,0 +1,23 @@
+.login {
+  .form {
+    min-height: 100vh;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .required-label {
+    color: #a94442;
+  }
+
+  // .ng-valid[required],
+  // .ng-valid.required {
+  //   border: 1px solid #42a948;
+  // }
+
+  .invalid-field:not(form) {
+    border: 1px solid #a94442;
+  }
+}

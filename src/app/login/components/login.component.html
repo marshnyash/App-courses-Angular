@@ -1,0 +1,48 @@
+<div class="login">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSignIn()">
+    <div class="alert alert-danger" role="alert" *ngIf="hasErrorBox">
+      Error: Your login or password was incorrect. Please try again.
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="d-flex col-sm-10 align-items-center">
+        <input
+          type="text"
+          class="form-control mr-1 col-sm-8"
+          [ngClass]="{ 'invalid-field': login?.errors?.custom }"
+          id="login"
+          placeholder="Enter Login"
+          formControlName="login"
+        />
+        <span class="required-label col-sm-4" *ngIf="login?.errors?.custom"
+          >*{{ login?.errors?.custom }}</span
+        >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label"
+        >Password</label
+      >
+      <div class="d-flex col-sm-10 align-items-center">
+        <input
+          type="password"
+          class="form-control mr-1 col-sm-8"
+          [ngClass]="{ 'invalid-field': password?.errors?.custom }"
+          id="password"
+          placeholder="Enter Password"
+          formControlName="password"
+        />
+        <span class="required-label col-sm-4" *ngIf="password?.errors?.custom"
+          >*{{ password?.errors?.custom }}</span
+        >
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" [disabled]="hasError" class="btn btn-primary">
+          Sign in
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
