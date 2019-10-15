@@ -9,28 +9,28 @@ export class CoursesService {
   public courses: Array<ICourse> = [
     {
       title: 'Video 1',
-      duration: 'Mon Oct 14 2019 16:56:59 GMT+0300',
+      duration: 3670,
       date: 2019,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laborum voluptatibus sequi cumque accusantium. Voluptates ipsam distinctio dolor culpa debitis. Deleniti error eaque iure laborum, ipsa dicta modi eveniet? '
     },
     {
       title: 'Video 2',
-      duration: 'Mon Oct 14 2019 16:56:59 GMT+0300',
+      duration: 3600,
       date: 2019,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laborum voluptatibus sequi cumque accusantium. Voluptates ipsam distinctio dolor culpa debitis. Deleniti error eaque iure laborum, ipsa dicta modi eveniet? '
     },
     {
       title: 'Video 3',
-      duration: 'Mon Oct 14 2019 16:56:59 GMT+0300',
+      duration: 5000,
       date: 2019,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laborum voluptatibus sequi cumque accusantium. Voluptates ipsam distinctio dolor culpa debitis. Deleniti error eaque iure laborum, ipsa dicta modi eveniet? '
     },
     {
       title: 'Video 4',
-      duration: '360',
+      duration: 0,
       date: 2019,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laborum voluptatibus sequi cumque accusantium. Voluptates ipsam distinctio dolor culpa debitis. Deleniti error eaque iure laborum, ipsa dicta modi eveniet? '
@@ -45,5 +45,5 @@ export class CoursesService {
 
   public updateCourse(id: number) {}
 
-  public DeleteCourse(id: number) {}
+  public deleteCourse(id: number) {}
 }

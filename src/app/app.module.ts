@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsCourseComponent } from './details-course/details-course.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { TimePipe } from './pipes/time.pipe';
+import { DurationPipe } from './pipes/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { TimePipe } from './pipes/time.pipe';
     DetailsCourseComponent,
     HeaderComponent,
     FooterComponent,
-    TimePipe
+    DurationPipe
   ],
   imports: [
     BrowserModule,
