@@ -12,14 +12,28 @@ import { ICourse } from '../interfaces/course';
 export class CoursesComponent implements OnInit, OnDestroy {
   private isDestroy$: Subject<void> = new Subject();
   public coursesList: ICourse[];
+  public searchText: string;
 
   constructor(private coursesService: CoursesService) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.getCourses();
   }
 
-  public getCourses() {
+  public onSearchCourses(): void {
+    this.getCourses();
+    if (this.searchText) {
+      const newCoursesList = [];
+      this.coursesList.forEach(data => {
+        if (data.title.toLowerCase().includes(this.searchText.toLowerCase())) {
+          newCoursesList.push(data);
+          this.coursesList = newCoursesList;
+        }
+      });
+    }
+  }
+
+  public getCourses(): void {
     this.coursesService
       .getAllCourses()
       .pipe(takeUntil(this.isDestroy$))

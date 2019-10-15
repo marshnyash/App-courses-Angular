@@ -14,6 +14,5 @@ export class DetailsCourseComponent implements OnInit {
 
   ngOnInit() {
     console.log('item', this.course);
-    console.log('index', this.index);
   }
 }
