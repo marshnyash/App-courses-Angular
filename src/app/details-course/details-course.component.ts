@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ICourse } from '../courses/interfaces/course';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CoursesService } from '../courses/services/courses.service';
 
 @Component({
   selector: 'app-details-course',
@@ -8,11 +8,17 @@ import { ICourse } from '../courses/interfaces/course';
 })
 export class DetailsCourseComponent implements OnInit {
   @Input() public course: any = 'course';
-  @Input() public index: any = 'index';
+  @Output() public deleteCourse: EventEmitter<void> = new EventEmitter();
 
-  constructor() {}
+  constructor(private coursesService: CoursesService) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     console.log('item', this.course);
+  }
+
+  public onDelete(): void {
+    if (window.confirm('Are you sure?')) {
+      this.deleteCourse.emit(this.course.id);
+    }
   }
 }

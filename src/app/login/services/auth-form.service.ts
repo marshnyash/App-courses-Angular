@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IUser } from '../interfaces/user-interface';
 import { Observable, of } from 'rxjs';
-// import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

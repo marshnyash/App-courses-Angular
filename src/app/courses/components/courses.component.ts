@@ -44,6 +44,15 @@ export class CoursesComponent implements OnInit, OnDestroy {
     console.log('this.coursesList ', this.coursesList);
   }
 
+  public deleteCourse(id: number): void {
+    this.coursesService
+      .deleteCourse(id)
+      .pipe(takeUntil(this.isDestroy$))
+      .subscribe(data => {
+        this.coursesList = data;
+      });
+  }
+
   public ngOnDestroy(): void {
     this.isDestroy$.next();
     this.isDestroy$.complete();

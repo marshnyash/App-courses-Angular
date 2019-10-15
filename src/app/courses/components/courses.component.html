@@ -23,7 +23,10 @@
       Add course
     </button>
   </div>
-  <div *ngFor="let course of coursesList; let index = index">
-    <app-details-course [course]="course" [index]="index"></app-details-course>
+  <div *ngFor="let course of coursesList">
+    <app-details-course
+      [course]="course"
+      (deleteCourse)="deleteCourse($event)"
+    ></app-details-course>
   </div>
 </div>
