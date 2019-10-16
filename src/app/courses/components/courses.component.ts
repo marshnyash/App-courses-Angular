@@ -3,6 +3,7 @@ import { CoursesService } from '../services/courses.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ICourse } from '../interfaces/course';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -14,7 +15,7 @@ export class CoursesComponent implements OnInit, OnDestroy {
   public coursesList: ICourse[];
   public searchText: string;
 
-  constructor(private coursesService: CoursesService) {}
+  constructor(private coursesService: CoursesService, private router: Router) {}
 
   public ngOnInit() {
     this.getCourses();

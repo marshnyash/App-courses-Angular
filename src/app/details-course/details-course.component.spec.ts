@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailsCourseComponent } from './details-course.component';
+import { DurationPipe } from '../pipes/duration.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('DetailsCourseComponent', () => {
   let component: DetailsCourseComponent;
@@ -8,9 +10,9 @@ describe('DetailsCourseComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailsCourseComponent ]
-    })
-    .compileComponents();
+      declarations: [DetailsCourseComponent, DurationPipe],
+      imports: [HttpClientModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
