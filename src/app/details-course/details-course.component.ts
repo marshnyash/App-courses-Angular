@@ -23,7 +23,7 @@ export class DetailsCourseComponent implements OnInit {
     }
   }
 
-  public onEdit() {
+  public editCourse() {
     this.router.navigate(['/courses', this.course.id]);
   }
 }

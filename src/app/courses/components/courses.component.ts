@@ -54,6 +54,11 @@ export class CoursesComponent implements OnInit, OnDestroy {
       });
   }
 
+  public addCourse() {
+    console.log('add');
+    this.router.navigate(['/courses/new']);
+  }
+
   public ngOnDestroy(): void {
     this.isDestroy$.next();
     this.isDestroy$.complete();
