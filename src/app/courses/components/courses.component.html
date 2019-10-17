@@ -24,11 +24,11 @@
     </button>
   </div>
   <div *ngFor="let course of coursesList">
-    <a [routerLink]="['/courses', course.id]">
-      <app-details-course
-        [course]="course"
-        (deleteCourse)="deleteCourse($event)"
-      ></app-details-course>
-    </a>
+    <!-- <a [routerLink]="['/courses', course.id]"> -->
+    <app-details-course
+      [course]="course"
+      (deleteCourse)="deleteCourse($event)"
+    ></app-details-course>
+    <!-- </a> -->
   </div>
 </div>
